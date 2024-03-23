@@ -144,12 +144,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         int randomXPosition = new Random().nextInt(surfaceWidth / pointSize);
         int randomYPosition = new Random().nextInt(surfaceHeight / pointSize);
 
-        if ((randomXPosition % 2 != 0 ){
-            randomXPosition = randomXPosition + 1;
-        }
-        if ((randomYPosition % 2 != 0 ){
-            randomYPosition = randomYPosition + 1;
-        }
+        if (randomXPosition % 2 != 0 ) randomXPosition = randomXPosition + 1;
+        if (randomYPosition % 2 != 0 ) randomYPosition = randomYPosition + 1;
         positionX = (pointSize * randomXPosition) + pointSize;
         positionY = (pointSize * randomYPosition) + pointSize;
     }
@@ -163,8 +159,31 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                 int headPositionY = snakesPointsList.get(0).getPositionY();
                 //kiểm tra rắn đã ăn điểm chưa
                 if(headPositionX == positionX && positionY == headPositionY){
-                //nếu ăn rồi thì rắn dài ra
+                    //nếu ăn rồi thì rắn dài ra
                     growSnake();
+                    //tạo một điểm ngẫu nhiên khác trên màn hình
+                    addPoint();
+                }
+                //kiểm tra hướng di chuyển của rắn
+                switch (movingPosition){
+                    case "right":
+                        //khi đầu rắn di chuyển về hướng nào thì phần thân di chuyển theo
+                        snakesPointsList.get(0).setPositionX(headPositionX + (pointSize *2));
+                        snakesPointsList.get(0).setPositionY(headPositionY);
+                        break;
+                    case "left":
+                        snakesPointsList.get(0).setPositionX(headPositionX - (pointSize *2));
+                        snakesPointsList.get(0).setPositionY(headPositionY);
+                        break;
+                    case "top":
+                        snakesPointsList.get(0).setPositionX(headPositionX);
+                        snakesPointsList.get(0).setPositionY(headPositionY + (pointSize *2));
+                        break;
+                    case "bottom":
+                        snakesPointsList.get(0).setPositionX(headPositionX );
+                        snakesPointsList.get(0).setPositionY(headPositionY + (pointSize *2));
+                        break;
+
                 }
             }
         }, 1000-snakeMovingSpeed, 1000- snakeMovingSpeed);
