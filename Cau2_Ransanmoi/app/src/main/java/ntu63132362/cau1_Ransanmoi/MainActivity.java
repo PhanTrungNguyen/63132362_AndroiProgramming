@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private static final int snakeColor = Color.YELLOW;
     //Set tốc độ cho rắn
     private static final int snakeMovingSpeed = 800;
+    //Tọa độ random của điểm
+    private int positionX, positionY;
+    //timer chuyển hướng di chuyển cho rắn
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,7 +139,16 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         int surfaceWidth = surfaceView.getWidth() - (pointSize * 2);
         int surfaceHeight = surfaceView.getHeight() - (pointSize * 2);
         int randomXPosition = new Random().nextInt(surfaceWidth / pointSize);
-        int randomYPosition
+        int randomYPosition = new Random().nextInt(surfaceHeight / pointSize);
+
+        if ((randomXPosition % 2 != 0 ){
+            randomXPosition = randomXPosition + 1;
+        }
+        if ((randomYPosition % 2 != 0 ){
+            randomYPosition = randomYPosition + 1;
+        }
+        positionX = (pointSize * randomXPosition) + pointSize;
+        positionY = (pointSize * randomYPosition) + pointSize;
     }
     private void moveSnake()
 }
