@@ -13,10 +13,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback {
 
-    private final List<SnakesPoints> snakesPoints = new ArrayList<>();
+    private final List<SnakesPoints> snakesPointsList = new ArrayList<>();
 
     private SurfaceView surfaceView;
     private TextView scoreTV;
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private static final int defaultTalePoints = 3;
     //Set màu cho rắn
     private static final int snakeColor = Color.YELLOW;
+    //Set tốc độ cho rắn
+    private static final int snakeMovingSpeed = 800;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,14 +106,36 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     }
     private void init(){
         //Xóa rắn
-        snakesPoints.clear();
+        snakesPointsList.clear();
         //Đặt lại điểm
         scoreTV.setText("0");
         //Điểm = 0
         score = 0;
         //Hướng mặc định là bên phải
         movingPosition = "right";
-        int starPositionX =
+        //Hướng mặc định của rắn trên màn hình
+        int startPositionX = (pointSize) * defaultTalePoints;
 
+
+        for (int i = 0; i < defaultTalePoints; i++){
+            //Thêm độ dài cho rắn khi cộng điểm
+            SnakesPoints snakesPoints = new SnakesPoints(startPositionX, pointSize);
+            snakesPointsList.add(snakesPoints);
+
+            startPositionX = startPositionX - (pointSize * 2);
+
+        }
+
+        //Tạo điểm random trên màn hình
+        addPoint();
+        moveSnake();
     }
+    private void addPoint(){
+        //
+        int surfaceWidth = surfaceView.getWidth() - (pointSize * 2);
+        int surfaceHeight = surfaceView.getHeight() - (pointSize * 2);
+        int randomXPosition = new Random().nextInt(surfaceWidth / pointSize);
+        int randomYPosition
+    }
+    private void moveSnake()
 }
