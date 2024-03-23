@@ -14,6 +14,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     private SurfaceView surfaceView;
     private TextView scoreTV;
+    private SurfaceHolder surfaceHolder
+    //hướng di chuyển mặc định của rắn
+    private String movingPosition = "right";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,28 +31,38 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         final AppCompatImageButton rightButton = findViewById(R.id.rightButton);
         final AppCompatImageButton bottomButton = findViewById(R.id.bottomButton);
 
+        surfaceView.getHolder().addCallback(this);
         topButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //Kiểm tra nếu rắn đang hướng xuống thì không thẻ đi thẳng lên chỉ có thể đi sang trái hoặc phải
+                if (!movingPosition.equals("bottom")){
+                    movingPosition = "top";
+                }
             }
         });
         leftButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (!movingPosition.equals("right")){
+                    movingPosition = "left";
+                }
             }
         });
         rightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (!movingPosition.equals("left")){
+                    movingPosition = "right";
+                }
             }
         });
         bottomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (!movingPosition.equals("top")){
+                    movingPosition = "bottom";
+                }
             }
         });
 
