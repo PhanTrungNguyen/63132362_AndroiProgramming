@@ -4,19 +4,34 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageButton;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback {
+
+    private final List<SnakesPoints> snakesPoints = new ArrayList<>();
 
     private SurfaceView surfaceView;
     private TextView scoreTV;
-    private SurfaceHolder surfaceHolder
+    //hàm vẽ giao diện cho rắn
+    private SurfaceHolder surfaceHolder;
     //hướng di chuyển mặc định của rắn
     private String movingPosition = "right";
+    //hàm điểm
+    private int score = 0;
+    //kích thước của rắn
+    private static final int pointSize = 28;
+    //kích thước mặc định của rắn
+    private static final int defaultTalePoints = 3;
+    //Set màu cho rắn
+    private static final int snakeColor = Color.YELLOW;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +87,9 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     @Override
     public void surfaceCreated(@NonNull SurfaceHolder holder) {
+        this.surfaceHolder = surfaceHolder;
 
+        init();
     }
 
     @Override
@@ -82,6 +99,18 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     @Override
     public void surfaceDestroyed(@NonNull SurfaceHolder holder) {
+
+    }
+    private void init(){
+        //Xóa rắn
+        snakesPoints.clear();
+        //Đặt lại điểm
+        scoreTV.setText("0");
+        //Điểm = 0
+        score = 0;
+        //Hướng mặc định là bên phải
+        movingPosition = "right";
+        int starPositionX =
 
     }
 }
