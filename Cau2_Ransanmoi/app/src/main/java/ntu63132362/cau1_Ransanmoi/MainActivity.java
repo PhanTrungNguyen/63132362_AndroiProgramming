@@ -14,6 +14,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity implements SurfaceHolder.Callback {
 
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     //Set tốc độ cho rắn
     private static final int snakeMovingSpeed = 800;
     //Tọa độ random của điểm
+    private Timer timer;
     private int positionX, positionY;
     //timer chuyển hướng di chuyển cho rắn
 
@@ -150,5 +153,25 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         positionX = (pointSize * randomXPosition) + pointSize;
         positionY = (pointSize * randomYPosition) + pointSize;
     }
-    private void moveSnake()
+    private void moveSnake(){
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+
+                int headPositionX = snakesPointsList.get(0).getPositionX();
+                int headPositionY = snakesPointsList.get(0).getPositionY();
+                //kiểm tra rắn đã ăn điểm chưa
+                if(headPositionX == positionX && positionY == headPositionY){
+                //nếu ăn rồi thì rắn dài ra
+                    growSnake();
+                }
+            }
+        }, 1000-snakeMovingSpeed, 1000- snakeMovingSpeed);
+    }
+
+    //Hàm làm rắn dài ra
+    private void growSnake(){
+
+    }
 }
