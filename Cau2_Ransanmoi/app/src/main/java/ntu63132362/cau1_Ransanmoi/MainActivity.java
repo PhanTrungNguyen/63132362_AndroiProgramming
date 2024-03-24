@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     @Override
     public void surfaceCreated(@NonNull SurfaceHolder holder) {
-        this.surfaceHolder = surfaceHolder;
+        this.surfaceHolder = holder;
 
         init();
     }
@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                         break;
                     case "top":
                         snakesPointsList.get(0).setPositionX(headPositionX);
-                        snakesPointsList.get(0).setPositionY(headPositionY + (pointSize *2));
+                        snakesPointsList.get(0).setPositionY(headPositionY - (pointSize *2));
                         break;
                     case "bottom":
                         snakesPointsList.get(0).setPositionX(headPositionX );
@@ -231,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                         int getTempPositionY = snakesPointsList.get(i).getPositionY();
 
                         snakesPointsList.get(i).setPositionX(headPositionX);
-                        snakesPointsList.get(i).setPositionX(headPositionY);
+                        snakesPointsList.get(i).setPositionY(headPositionY);
                         canvas.drawCircle(snakesPointsList.get(i).getPositionX(),snakesPointsList.get(i).getPositionY(),pointSize, cratePointColor());
                         //chuyển hướng đầu rắn
                         headPositionX = getTempPositionX;
