@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageButton;
 
 import android.content.DialogInterface;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -41,9 +44,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private static final int snakeMovingSpeed = 800;
     //Tọa độ random của điểm
     private Timer timer;
+    //Canvas để vẽ rắn lên màn hình
+    private Canvas canvas = null;
     private int positionX, positionY;
     //timer chuyển hướng di chuyển cho rắn
-
+    private Paint pointColor = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -201,15 +206,24 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
+                            init();
                         }
                     });
                     //timer của background
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            builder.show()
+                            builder.show();
                         }
                     });
+                }
+
+                else {
+                    canvas = surfaceHolder.lockCanvas();
+                    canvas.drawColor(Color.WHITE, PorterDuff.Mode.CLEAR);
+                    //chuyển hướng đầu rắn thì phần thân vẫn đi theo
+                    canvas.drawCircle(snakesPointsList.get(0).getPositionX(), snakesPointsList.get(0).getPositionY(), pointSize,  cratePointColor() );
+                    //vẽ điểm ngẫu nhiên để rắn ăn
                 }
             }
         }, 1000-snakeMovingSpeed, 1000- snakeMovingSpeed);
@@ -222,5 +236,17 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     private boolean checkGameOver(int headPositionX, int PositionY){
         boolean gameOver = false;
         return gameOver;
+    }
+    private Paint cratePointColor(){
+        //check màu rắn
+        if (pointColor == null){
+            pointColor = new Paint();
+            pointColor.setColor(snakeColor);
+            pointColor.setStyle(Paint.Style.FILL);
+            //Làm mượt rắn
+            pointColor.setAntiAlias(true);
+        }
+
+        return pointColor;
     }
 }
