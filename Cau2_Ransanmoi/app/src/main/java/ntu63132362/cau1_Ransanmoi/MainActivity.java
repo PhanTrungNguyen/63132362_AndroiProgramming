@@ -245,17 +245,38 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     //Hàm làm rắn dài ra
     private void growSnake(){
+        //Làm cho rắn dài ra sau khi ăn điểm
+        SnakesPoints snakesPoints = new SnakesPoints(0,0);
+        //Thêm điểm vào thân rắn
+        snakesPointsList.add(snakesPoints);
+        //Cộng điểm
+        score++;
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                
+            }
+        });
 
 
     }
-    private boolean checkGameOver(int headPositionX, int PositionY){
+    private boolean checkGameOver(int headPositionX, int headPositionY){
         boolean gameOver = false;
         //kiểm tra rắn va chạm vào các cạnh của màn hình không
         if (snakesPointsList.get(0).getPositionX() < 0||
-        snakesPointsList.get(0).getPositionY() < 0 ||
+                snakesPointsList.get(0).getPositionY() < 0 ||
                 snakesPointsList.get(0).getPositionX() >= surfaceView.getWidth() ||
-                snakesPointsList.get(0).getPositionY() >= surfaceView.getHeight()){
-            
+                snakesPointsList.get(0).getPositionY() >= surfaceView.getHeight())
+        {
+            gameOver = true;
+        }else {
+            //nếu rắn xảy ra va chạm vào thân
+            for (int i = 1; i < snakesPointsList.size();i ++){
+                if (headPositionX == snakesPointsList.get(i).getPositionX() ||
+                        headPositionY == snakesPointsList.get(i).getPositionY()){
+                        gameOver = true;
+                        break;
+            }
         }
 
         return gameOver;
@@ -269,7 +290,6 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
             //Làm mượt rắn
             pointColor.setAntiAlias(true);
         }
-
         return pointColor;
     }
 }
