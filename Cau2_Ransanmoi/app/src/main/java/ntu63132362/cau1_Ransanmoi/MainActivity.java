@@ -1,9 +1,11 @@
 package ntu63132362.cau1_Ransanmoi;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageButton;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.SurfaceHolder;
@@ -185,6 +187,30 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                         break;
 
                 }
+                //kiểm tra va chạm của rắn
+                if (checkGameOver(headPositionX, headPositionY)){
+                    //dừng timer, dừng di chuyển của rắn khi game kết thúc
+                    timer.purge();
+                    timer.cancel();
+                    //hiển thị thông báo game over
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setMessage("Score: "+score);
+                    builder.setTitle("Game Over");
+                    builder.setCancelable(false);
+                    builder.setPositiveButton("Play Again", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+                    //timer của background
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            builder.show()
+                        }
+                    });
+                }
             }
         }, 1000-snakeMovingSpeed, 1000- snakeMovingSpeed);
     }
@@ -192,5 +218,9 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     //Hàm làm rắn dài ra
     private void growSnake(){
 
+    }
+    private boolean checkGameOver(int headPositionX, int PositionY){
+        boolean gameOver = false;
+        return gameOver;
     }
 }
