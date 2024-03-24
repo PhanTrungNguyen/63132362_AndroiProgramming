@@ -1,0 +1,29 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable button_background
+drawable fb
+drawable google
+drawable gradient_background
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_people_128
+drawable nguyen
+drawable twitter
+drawable wave_background
+id Loginbtn
+id appLogo
+id btnBack
+id edPassword
+id edUserName
+id topview
+layout activity_main
+layout activity_main2
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Cau3_IntroMyseft
+style Theme.Cau3_IntroMyseft
+xml backup_rules
+xml data_extraction_rules

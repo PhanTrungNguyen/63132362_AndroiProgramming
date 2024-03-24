@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "COMPATIBLE_SCREEN_MANIFEST",
+    "kind": "Directory"
+  },
+  "applicationId": "ntu63132362.Cau3_IntroMyseft",
+  "variantName": "debug",
+  "elements": []
+}

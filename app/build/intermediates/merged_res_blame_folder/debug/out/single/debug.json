@@ -1,0 +1,126 @@
+[
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_twitter.png.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/twitter.png"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_ic_people_128.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/ic_people_128.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_nguyen.jpg.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/nguyen.jpg"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_gradient_background.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/gradient_background.xml"
+    },
+    {
+        "merged": "ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/layout_activity_main2.xml.flat",
+        "source": "ntu63132362.Cau3_IntroMyseft.app-main-33:/layout/activity_main2.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_button_background.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/button_background.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/xml_backup_rules.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_ic_lock_24.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/ic_lock_24.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/layout_activity_main2.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/layout/activity_main2.xml"
+    },
+    {
+        "merged": "ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "ntu63132362.Cau3_IntroMyseft.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_ic_email_24.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/ic_email_24.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_wave_background.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/wave_background.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_fb.png.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/fb.png"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_google.png.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/google.png"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/drawable_round_border.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/drawable/round_border.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/xml_data_extraction_rules.xml.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-merged_res-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/phantrungnguyen/.gradle/daemon/8.2/ntu63132362.Cau3_IntroMyseft.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+    }
+]
