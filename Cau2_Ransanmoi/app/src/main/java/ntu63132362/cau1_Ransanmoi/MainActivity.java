@@ -230,8 +230,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                         int getTempPositionX = snakesPointsList.get(i).getPositionX();
                         int getTempPositionY = snakesPointsList.get(i).getPositionY();
 
-                        snakesPointsList.get(i).getPositionX(headPositionX);
-                        snakesPointsList.get(i).getPositionY(headPositionY);
+                        snakesPointsList.get(i).setPositionX(headPositionX);
+                        snakesPointsList.get(i).setPositionX(headPositionY);
                         canvas.drawCircle(snakesPointsList.get(i).getPositionX(),snakesPointsList.get(i).getPositionY(),pointSize, cratePointColor());
                         //chuyển hướng đầu rắn
                         headPositionX = getTempPositionX;
@@ -254,7 +254,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                
+                scoreTV.setText(String.valueOf(score));
             }
         });
 
@@ -272,10 +272,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         }else {
             //nếu rắn xảy ra va chạm vào thân
             for (int i = 1; i < snakesPointsList.size();i ++){
-                if (headPositionX == snakesPointsList.get(i).getPositionX() ||
-                        headPositionY == snakesPointsList.get(i).getPositionY()){
-                        gameOver = true;
-                        break;
+                if (headPositionX == snakesPointsList.get(i).getPositionX() &&
+                        headPositionY == snakesPointsList.get(i).getPositionY()) {
+                    gameOver = true;
+                    break;
+                }
             }
         }
 

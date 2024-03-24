@@ -25,10 +25,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            android:textColor="#FFFFFFF"
+            android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold"
-
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             />
@@ -49,6 +48,7 @@
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:background="@android:color/holo_blue_light"
+            android:contentDescription="topButton"
             android:src="@drawable/top_arrow"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,6 +60,7 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/holo_blue_light"
+                android:contentDescription="leftButton"
                 android:src="@drawable/left_arrow"/>
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/rightButton"
@@ -67,6 +68,7 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@android:color/holo_blue_light"
+                android:contentDescription="rightButton"
                 android:src="@drawable/right_arrow"/>
 
         </LinearLayout>
@@ -75,6 +77,7 @@
             android:layout_width="80dp"
             android:layout_height="50dp"
             android:background="@android:color/holo_blue_light"
+            android:contentDescription="bottomButton"
             android:src="@drawable/bottom_arrow"/>
     </LinearLayout>
 </RelativeLayout>
