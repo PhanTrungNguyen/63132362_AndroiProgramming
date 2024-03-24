@@ -233,10 +233,11 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                         snakesPointsList.get(i).getPositionX(headPositionX);
                         snakesPointsList.get(i).getPositionY(headPositionY);
                         canvas.drawCircle(snakesPointsList.get(i).getPositionX(),snakesPointsList.get(i).getPositionY(),pointSize, cratePointColor());
+                        //chuyển hướng đầu rắn
                         headPositionX = getTempPositionX;
                         headPositionY = getTempPositionY;
                     }
-
+                    surfaceHolder.unlockCanvasAndPost(canvas);
                 }
             }
         }, 1000-snakeMovingSpeed, 1000- snakeMovingSpeed);
@@ -245,9 +246,18 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
     //Hàm làm rắn dài ra
     private void growSnake(){
 
+
     }
     private boolean checkGameOver(int headPositionX, int PositionY){
         boolean gameOver = false;
+        //kiểm tra rắn va chạm vào các cạnh của màn hình không
+        if (snakesPointsList.get(0).getPositionX() < 0||
+        snakesPointsList.get(0).getPositionY() < 0 ||
+                snakesPointsList.get(0).getPositionX() >= surfaceView.getWidth() ||
+                snakesPointsList.get(0).getPositionY() >= surfaceView.getHeight()){
+            
+        }
+
         return gameOver;
     }
     private Paint cratePointColor(){
