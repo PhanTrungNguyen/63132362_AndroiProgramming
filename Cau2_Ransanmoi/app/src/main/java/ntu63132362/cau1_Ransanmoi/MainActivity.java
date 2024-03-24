@@ -224,6 +224,19 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
                     //chuyển hướng đầu rắn thì phần thân vẫn đi theo
                     canvas.drawCircle(snakesPointsList.get(0).getPositionX(), snakesPointsList.get(0).getPositionY(), pointSize,  cratePointColor() );
                     //vẽ điểm ngẫu nhiên để rắn ăn
+                    canvas.drawCircle(positionX, positionY, pointSize, cratePointColor());
+                    //các điểm đã ăn sẽ đi theo đầu của rắn
+                    for (int i = 1; i < snakesPointsList.size(); i++){
+                        int getTempPositionX = snakesPointsList.get(i).getPositionX();
+                        int getTempPositionY = snakesPointsList.get(i).getPositionY();
+
+                        snakesPointsList.get(i).getPositionX(headPositionX);
+                        snakesPointsList.get(i).getPositionY(headPositionY);
+                        canvas.drawCircle(snakesPointsList.get(i).getPositionX(),snakesPointsList.get(i).getPositionY(),pointSize, cratePointColor());
+                        headPositionX = getTempPositionX;
+                        headPositionY = getTempPositionY;
+                    }
+
                 }
             }
         }, 1000-snakeMovingSpeed, 1000- snakeMovingSpeed);
