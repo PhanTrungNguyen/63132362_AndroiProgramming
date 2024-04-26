@@ -17,20 +17,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         bottomNav = findViewById(R.id.bottomNav);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new FragmentHome()).commit();
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 int id = item.getItemId();
                 if (id == R.id.navHome){
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new HomeFragment()).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new FragmentHome()).commit();
                     return true;
                 } else if (id == R.id.navSearch) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new SearchFragment()).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new FragmentSearch()).commit();
                     return true;
                 }else if (id == R.id.navProfile) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new ProfileFragment()).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new FragmentProfile()).commit();
                     return true;
                 }
                 return false;
