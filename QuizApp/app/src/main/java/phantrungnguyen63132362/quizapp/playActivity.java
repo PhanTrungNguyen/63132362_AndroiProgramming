@@ -1,5 +1,8 @@
 package phantrungnguyen63132362.quizapp;
 
+import static phantrungnguyen63132362.quizapp.R.drawable.background_btn_choose;
+import static phantrungnguyen63132362.quizapp.R.drawable.background_btn_choose_color;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,18 +14,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class playActivity extends AppCompatActivity {
-    String[] question_list = {"Quel numéro est indissociable du footballeur Cristiano Ronaldo ?",
-            "D’où est originaire le footballeur portugais Cristiano Ronaldo ?","quel pays Cristiano Ronaldo n’a-t-il jamais été membre d’un club ?"
-            ,"Dans quel club de foot Cristiano Ronaldo est-il resté le plus longtemps en continu ?",
-            "Combien de Ligue des Champions Cristiano Ronaldo a-t-il remporté durant sa carrière madrilène de 2009 à 2018 ?"
+    String[] question_list = {"Kết quả của phép tính 23+17 là bao nhiêu?"
+            ,"Kết quả của phép tính 58−24 là bao nhiêu?"
+            ,"Kết quả của phép tính 76+29 là bao nhiêu?"
+            ,"Kết quả của phép tính 90−45 là bao nhiêu?"
+            ,"Kết quả của phép tính 33+22 là bao nhiêu?"
     };
-    String[] choose_list = {"3","7","14","19",
-            "porto","lisboone","madère","fato",
-            "italie","allemagne","espagne","angleterre",
-            "juventus","united","barcelone","madrid",
-            "1","2","4","5"
+    String[] choose_list = {"39","40","41","42",
+            "32","34","36","38",
+            "103","104","105","106",
+            "40","43","45","50",
+            "54","55","56","57"
     };
-    String[] correct_list = {"7","madère","allemagne","madrid","4"};
+    String[] correct_list = {"40","34","105","45","55"};
 
 
     TextView cpt_question , text_question;
@@ -57,7 +61,7 @@ public class playActivity extends AppCompatActivity {
                         isclickBtn = false;
 
                         if(!valueChoose.equals(correct_list[currentQuestion])){
-                            Toast.makeText(playActivity.this , "erreur",Toast.LENGTH_LONG).show();
+                            Toast.makeText(playActivity.this , "incorrect",Toast.LENGTH_LONG).show();
                             btn_click.setBackgroundResource(R.drawable.background_btn_incorrect);
 
                         }else {
@@ -71,14 +75,14 @@ public class playActivity extends AppCompatActivity {
                                 currentQuestion = currentQuestion + 1;
                                 remplirData();
                                 valueChoose = "";
-                                btn_choose1.setBackgroundResource(R.drawable.background_btn_choose);
-                                btn_choose2.setBackgroundResource(R.drawable.background_btn_choose);
-                                btn_choose3.setBackgroundResource(R.drawable.background_btn_choose);
-                                btn_choose4.setBackgroundResource(R.drawable.background_btn_choose);
+                                btn_choose1.setBackgroundResource(background_btn_choose);
+                                btn_choose2.setBackgroundResource(background_btn_choose);
+                                btn_choose3.setBackgroundResource(background_btn_choose);
+                                btn_choose4.setBackgroundResource(background_btn_choose);
 
                             }else {
                                 Intent intent  = new Intent(playActivity.this , resulteActivity.class);
-                                intent.putExtra("Resute" , scorePlayer);
+                                intent.putExtra("Score:" , scorePlayer);
                                 startActivity(intent);
                                 finish();
                             }
@@ -109,10 +113,10 @@ public class playActivity extends AppCompatActivity {
         btn_click = (Button)view;
 
         if (isclickBtn) {
-            btn_choose1.setBackgroundResource(R.drawable.background_btn_choose);
-            btn_choose2.setBackgroundResource(R.drawable.background_btn_choose);
-            btn_choose3.setBackgroundResource(R.drawable.background_btn_choose);
-            btn_choose4.setBackgroundResource(R.drawable.background_btn_choose);
+            btn_choose1.setBackgroundResource(background_btn_choose);
+            btn_choose2.setBackgroundResource(background_btn_choose);
+            btn_choose3.setBackgroundResource(background_btn_choose);
+            btn_choose4.setBackgroundResource(background_btn_choose);
         }
         chooseBtn();
 
@@ -120,7 +124,7 @@ public class playActivity extends AppCompatActivity {
     }
     void chooseBtn(){
 
-        btn_click.setBackgroundResource(R.drawable.background_btn_choose_color);
+        btn_click.setBackgroundResource(background_btn_choose_color);
         isclickBtn = true;
         valueChoose = btn_click.getText().toString();
     }
