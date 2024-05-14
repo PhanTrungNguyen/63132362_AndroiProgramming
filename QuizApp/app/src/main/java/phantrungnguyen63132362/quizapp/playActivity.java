@@ -77,7 +77,7 @@ public class playActivity extends AppCompatActivity {
                                 btn_choose4.setBackgroundResource(R.drawable.background_btn_choose);
 
                             }else {
-                                Intent intent  = new Intent(playActivity.this , ResulteActivity.class);
+                                Intent intent  = new Intent(playActivity.this , resulteActivity.class);
                                 intent.putExtra("Resute" , scorePlayer);
                                 startActivity(intent);
                                 finish();
@@ -86,7 +86,7 @@ public class playActivity extends AppCompatActivity {
                         },2000);
 
                     }else {
-                        Toast.makeText(playActivity.this ,  "Vous devez en choisir un",Toast.LENGTH_LONG).show();
+                        Toast.makeText(playActivity.this ,  "Pleas pick one!",Toast.LENGTH_LONG).show();
                     }
                 }
         );
