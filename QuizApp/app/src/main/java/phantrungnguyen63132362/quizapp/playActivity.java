@@ -3,9 +3,11 @@ package phantrungnguyen63132362.quizapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class    playActivity extends AppCompatActivity {
     String[] question_list = {"Kết quả của phép tính 23+17 là bao nhiêu?"
@@ -25,7 +27,7 @@ public class    playActivity extends AppCompatActivity {
     Button btn_choose1 , btn_choose2 , btn_choose3 , btn_choose4 , btn_next;
     int currentQuestion =  0  ;
     boolean isclickBtn = false;
-    
+    String valueChoose = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,20 @@ public class    playActivity extends AppCompatActivity {
         btn_next.setOnClickListener(
                 v -> {
                     if (isclickBtn){
+                        if (valueChoose.equals(choose_list[currentQuestion])){
+                            Toast.makeText()
+                        }else {
+
+                        }
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                currentQuestion = currentQuestion + 1;
+                                remplirData();
+                                isclickBtn = false;
+                                valueChoose = "";
+                            }
+                        }, 2000);
 
                     }
                 }
@@ -63,6 +79,8 @@ public class    playActivity extends AppCompatActivity {
             Button btn_click = (Button)view;
             btn_click.setBackgroundResource(R.drawable.background_btn_choose_color);
             isclickBtn = true;
+            valueChoose = btn_click.getTag().toString();
+
         }
 
     }
