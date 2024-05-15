@@ -74,7 +74,7 @@
             android:onClick="exit_App"
 
             android:padding="8dp"
-            android:text="exit" />
+            android:text="Exit" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
