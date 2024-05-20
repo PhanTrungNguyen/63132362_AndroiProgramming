@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/primary_color"
     tools:context=".MainActivity">
 
 
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Quiz App"
         android:textSize="35sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:fontFamily="@font/chakrapetchbold"
         app:layout_constraintBottom_toBottomOf="parent"
