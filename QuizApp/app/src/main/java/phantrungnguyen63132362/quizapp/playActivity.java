@@ -81,8 +81,8 @@ public class playActivity extends AppCompatActivity {
                                 btn_choose4.setBackgroundResource(background_btn_choose);
 
                             }else {
-                                Intent intent  = new Intent(playActivity.this , resulteActivity.class);
-                                intent.putExtra("Score:" , scorePlayer);
+                                Intent intent  = new Intent(playActivity.this , ResulteActivity.class);
+                                intent.putExtra("Resute" , scorePlayer);
                                 startActivity(intent);
                                 finish();
                             }

@@ -16,7 +16,7 @@
             android:name=".settingActivity"
             android:exported="false" />
         <activity
-            android:name=".resulteActivity"
+            android:name=".ResulteActivity"
             android:exported="false" />
         <activity
             android:name=".playActivity"

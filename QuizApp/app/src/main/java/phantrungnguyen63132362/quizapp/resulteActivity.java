@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class resulteActivity extends AppCompatActivity {
+public class ResulteActivity extends AppCompatActivity {
 
     TextView textView ;
     @Override
@@ -19,7 +19,7 @@ public class resulteActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_restart).setOnClickListener(
                 restart->{
-                    Intent intent  = new Intent(resulteActivity.this , MainActivity.class);
+                    Intent intent  = new Intent(ResulteActivity.this , MainActivity.class);
                     startActivity(intent);
                     finish();
                 }
