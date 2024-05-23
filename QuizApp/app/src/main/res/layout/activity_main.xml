@@ -44,7 +44,7 @@
             android:textSize="20sp"
             android:padding="8dp"
             android:onClick="main_btn"
-            android:text="Play" />
+            android:text="Chơi" />
 
         <Button
             android:id="@+id/btn_setting"
@@ -58,8 +58,7 @@
             android:textSize="20sp"
             android:padding="8dp"
             android:onClick="open_Settings"
-
-            android:text="Setting" />
+            android:text="Cài đặt" />
 
         <Button
             android:id="@+id/btn_exit"
@@ -72,9 +71,8 @@
             android:fontFamily="@font/chakrapetchbold"
             android:textSize="20sp"
             android:onClick="exit_App"
-
             android:padding="8dp"
-            android:text="Exit" />
+            android:text="Thoắt" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
